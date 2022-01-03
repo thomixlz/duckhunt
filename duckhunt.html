@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>DuckHunt | Profil : Sikara</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+	<!-- FAVICON --> 
+
+	<link rel="icon" href="assets/img/playstation.ico" />
+
+	<!-- CSS --> 
+
+	<link rel="stylesheet" href="assets/css/duckhunt.css"/>
+</head>
+
+
+<body>
+	<div>
+
+		<!--====== Intro Screen / Menu principal ======-->
+
+
+		<div class="introScreen screen"> 
+				<h1></h1>
+				<div class="modeDeJeu">
+					<button class="singleplayer">Solo</button>
+					<p>Le mode solo du DuckHunt Original</p>
+					<button class="multiplayer">Multijoueur</button>
+					<p>Mode 1 contre 1 en local</p>
+				</div>
+				<div class="yourScore scores"></div>
+				<div class="yourScore2 scores"></div>
+				<div class="top1 scores"></div>
+				<div class="fakegames">FakeGames &copy; 2022</div>
+				<div class="helptext">INFOS =</div>
+				<button class="help"> 
+                    <div class="replaybutton"></div>
+				</button>
+		</div>
+
+
+
+		<!--====== Game Screen / Ecran de jeu + Element de jeu ======-->
+
+		<div class="gameScreen screen">	
+					
+			<div class="duck" id="duck"></div>
+			<div class="terrePremierPlan"><img src="/assets/img/duck/bg.png" alt=""></div>
+			<div class="batiment"></div>
+			<div class="batiment2"></div>
+			<div class="nuage"></div>
+			<div class="nuage2"></div>
+			<div class="nuage3"></div>
+			<div class="chienCourir"></div>
+			<div class="chienAttrape"></div>
+			<div class="chienRigole"></div>
+
+
+		<!--====== Footer / HUD en bas de l'écran ======-->
+
+			<footer>
+
+				<div class="bulletBox statBox">
+					<div class="bullet bullet1"></div>
+					<div class="infini"></div>
+					<div class="bullet bullet2"></div>
+					<div class="bullet bullet3"></div>
+				</div>
+				<div class="duckBox statBox"></div>
+				<div class="scoreBox statBox">Score:</div>
+				<div class="scoreBox2 statBox">Score:</div>
+				<div class="timer statBox">Timer:</div>
+				<button class="pausebutton">
+                    <div class="replaybutton"></div>
+				</button>
+				
+			</footer>
+		</div>
+
+	</div>
+
+	<!--====== Les scripts =====-->
+
+	<script src="assets/js/duckhunt.js"></script>
+
+</body>
+</html>

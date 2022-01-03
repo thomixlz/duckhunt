@@ -1,0 +1,512 @@
+/* TOUT LE CSS */ 
+
+* {
+	box-sizing: border-box;
+	cursor: url('/assets/img/duck/aim.png') 16 16, crosshair;
+}
+
+/* FONTS (Spécial duckhunt) */
+
+@font-face {
+    font-family: pixelFont;
+    src: url('/assets/fonts/pixelFont.ttf'); 
+   }
+
+
+/* ========================================= /*
+
+Pour une meilleur lisibilité, l'ordre est le même que dans le html
+
+/* ========================================= */
+
+/* PART 0 = Général */
+
+body {
+	background-color: #000;
+	cursor: url('/assets/img/duck/aim.png') 16 16, crosshair;
+}
+
+button:hover {
+	cursor: url('/assets/img/duck/aim2.png') 16 16, crosshair;
+	opacity: 50%;
+	box-shadow: white;
+	background-size: 70%;
+}
+
+
+/* PART 1 = Menu Principal */
+
+.screen{
+	margin-top: 90px;
+	margin-left: 340px;
+	width: 1280px;
+	height: 769px;
+	position: relative;
+	cursor: url('/assets/img/duck/aim.png') 16 16;
+	font-family: pixelFont;
+
+}
+
+.introScreen{
+	background-image: url('/assets/img/duck/bg-ac.gif');
+	background-size: cover;
+	width: 1280px;
+	height: 769px;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 200px;
+}
+
+h1{
+	background-image: url('/assets/img/duck/logo-duck.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 400px;
+	height: 400px;
+	top: -150px;
+	margin: 50px auto 5px;
+	
+}
+
+.multiplayer, .singleplayer{	
+	padding: 5px;
+	display: block;
+	margin: 50px auto 5px;
+	color: #00d0db;
+	font-size: 2em;
+	font-family: pixelFont;
+	background-color: #000019;
+	border: 2px solid #00d0db;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	top: -350px;
+}
+
+.multiplayer:hover + p{
+	opacity: 100%;
+}
+
+.singleplayer:hover + p{
+	opacity: 100%;
+}
+
+p{
+	color: #00d0db;
+	font-size: 1em;
+	text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
+	opacity: 0;
+	transition: opacity 1s ease-out 0s;
+	top: -350px;
+	position: relative;
+	margin-top: 25px;
+}
+
+.scores{
+	color: #00d0db;
+	font-size: 1.5em;
+	display: none;
+	top : -300px;
+	position: relative;
+	border-radius: 20% 30px 10px;
+	text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
+}
+
+
+.yourScore, .topScore{
+	animation: blink 3s infinite ease-in-out 0s;
+	display: none;
+}
+
+.yourScore2{ 
+	animation: blink 3s infinite ease-in-out 0s;
+	margin-top: 20px;
+	display: none;
+}
+
+.top1{ 
+	animation: blink 0.5s infinite ease-in-out 0s;
+	margin-top: 20px;
+	display: none;
+	color: rgb(32, 218, 32);
+}
+
+
+@keyframes blink{
+	0%{opacity: 100%}
+	50%{opacity: 0%}
+	100%{opacity: 100%}
+}
+
+
+.fakegames{
+	color: #00d0db;
+	opacity: 10%;
+	bottom: 10px;
+	right: 10px;
+	position: relative;
+	text-align: left;
+	margin-left: 20px;
+	top: -190px;
+}
+
+.helptext {
+	color: #00d0db;
+	bottom: 10px;
+	right: 10px;
+	position: relative;
+	text-align: right;
+	margin-right: 55px;
+	top: -205px;
+}
+
+.help {
+	background-image: url('/assets/img/duck/help.png');
+	background-color:transparent;
+	background-position: 14px;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	width: 7%;
+	height: 75%;
+	position: relative;
+	border: 4px solid #00000000;
+	top: -430px;
+	left: 610px;
+}
+
+
+
+/* PART 2 = Menu de jeux */
+
+
+.gameScreen{	
+	background-image: url('/assets/img/duck/bg_full.gif');
+	background-size: 110%;
+	overflow: hidden;
+	display: none;
+}
+
+.duck{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	display: none;	
+	background: url('/assets/img/duck/GS resized.png');
+	background-position: -420px -7484px;
+	cursor: url('/assets/img/duck/aim2.png') 16 16, crosshair;
+}
+
+
+.terrePremierPlan{
+	position: absolute;
+	bottom: 0;
+	z-index: 10; 
+	user-select: none;
+}
+
+.batiment{
+	width: 213px;
+	height: 368px;
+	top: 205px;
+	left: 140px;
+	position: absolute;
+	background-image: url('/assets/img/duck/gs.png');
+	background-position: -450px -412px;
+	transform: scale(-1,1);
+}
+
+.batiment2{
+	width: 213px;
+	height: 368px;
+	top: 240px;
+	left: 1050px;
+	position: absolute;
+	background-image: url('/assets/img/duck/gs.png');
+	background-position: -450px -412px;
+	transform: scale(-1,1);
+}
+
+.nuage{
+	margin-top: 50px;
+	width: 213px;
+	height: 368px;
+	left: -600px;
+	position: absolute;
+	background-image: url('/assets/img/duck/nuage.png');
+	background-repeat: no-repeat;
+	opacity: 30%;
+	transform: scale(-1,1);
+	animation-name: nuage;
+	animation-iteration-count: infinite;
+	animation-duration: 350s;
+}
+
+.nuage2{
+	margin-top: 75px;
+	width: 213px;
+	height: 368px;
+	left: -600px;
+	position: absolute;
+	background-image: url('/assets/img/duck/nuage.png');
+	background-repeat: no-repeat;
+	opacity: 30%;
+	transform: scale(-1,1);
+	animation-name: nuage;
+	animation-iteration-count: infinite;
+	animation-duration: 350s;
+	animation-delay: 35s;
+}
+
+.nuage3{
+	margin-top: 40px;
+	width: 213px;
+	height: 368px;
+	left: -600px;
+	position: relative;
+	background-image: url('/assets/img/duck/nuage.png');
+	background-repeat: no-repeat;
+	opacity: 30%;
+	transform: scale(-1,1);
+	animation-name: nuage;
+	animation-iteration-count: infinite;
+	animation-duration: 350s;
+	animation-delay: 45s;
+}
+
+.chienCourir{
+	width: 150px;
+	height: 130px;
+	position: absolute;
+	top: 550px;
+	left: 0;
+	background-image: url('/assets/img/duck/GS resized.png');
+	background-position: 0px 0px;
+	transition: all 3s ease-in-out 0s;
+	animation: chienCourir .5s 6 step-end 0s;
+	z-index: 20;
+}
+
+.chienAttrape{
+	width: 170px;
+	height: 180px;
+	position: absolute;
+	top: 600px;
+	background-image: url('/assets/img/duck/GS resized.png');
+	background-position: -780px -17px;
+}
+
+
+.chienRigole{
+	width: 150px;
+	height: 130px;
+	position: absolute;
+	top: 600px;
+	left: calc(50% - 75px);
+	background-image: url('/assets/img/duck/GS resized.png');
+	background-position: -480px -140px;
+	transition: all 1s cubic-bezier(0.26, 0.63, 0, 0.97) 0s;
+	animation: chienRigole .5s 6 step-end 0s;
+}
+
+/* PART 3 = Footer et HUD en jeux */
+
+
+footer{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 90px;
+	width: 100%;
+	z-index: 20;	
+	user-select: none;
+}
+
+.bulletBox{
+	width: 100px;
+	text-align: center;
+	line-height: 70px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.bullet{
+	width: 45px;
+	height: 50px;
+	background-image: url('/assets/img/duck/gs.png');
+	background-position: -716px -736px;
+}
+
+.infini {
+	width: 45px;
+	height: 50px;
+	background-image: url('/assets/img/duck/inifini.png');
+	background-size: 110%;
+	background-repeat: no-repeat;
+	margin-top: 25px;
+	margin-right: 20px;
+	display: none;
+
+}
+
+.statBox{
+	height: 70px;
+	border: 4px solid #00000049;
+	border-radius: 10px;
+	background-image: url('/assets/img/duck/rog.png');
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: 5px ;
+	color: #fcc309;
+	font-size: 25px;
+	font-family: pixelFont;
+}
+
+.duckBox{
+	text-align: center;
+	font-size: 10px;
+	line-height: 70px;
+}
+
+.scoreBox{
+	width: 200px;	
+	padding-top: 5px;
+	text-align: center;	
+}
+
+.scoreBox2{
+	display: none;
+	width: 200px;	
+	padding-top: 5px;
+	text-align: center;	
+}
+
+.timer{
+	display: none;
+	width: 200px;	
+	padding-top: 5px;
+	text-align: center;	
+}
+
+.pausebutton {
+	background-image: url('/assets/img/duck/pause.png');
+	background-color:transparent;
+	background-position: 14px;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	width: 7%;
+	height: 75%;
+	position: relative;
+	border: 4px solid #00000000;
+	left: 1px;
+	display : block;
+}
+
+
+
+/* PART 4 = Utilisé dans JS */
+
+.duckStat{
+	width: 45px;
+	height: 45px;
+	margin: 10px 2px;
+	background-image: url('/assets/img/duck/duck icon.png');
+	background-size: cover;
+	border-radius: 50%;
+	float: right;
+}
+
+.clear{
+	clear:both;
+}
+
+
+.isKilled{
+	transition: left 1s ease-in .5s;
+}
+
+
+/* PART 5 = Animation */
+
+
+
+/* Anim: Course du chien */
+@keyframes chienCourir{
+0%{background-position: 0 0;}
+25%{background-position: -150px 0;}
+50%{background-position: -300px 0;}
+75%{background-position: -450px 0;}
+100%{background-position: -600px 0;}
+}
+
+/* Anim: Saut du chien */
+@keyframes dogJump{
+0%{display: none;
+	background-position: 0 -140px;}
+50%{background-position: -150px -140px;}
+75%{background-position: -300px -140px;}
+100%{display: none}
+}
+
+/* Anim: Chien qui attrape = pancarte (à la base il attraper un canard) */
+@keyframes chienAttrape{
+	0% {top:560px;}
+	25% {top:460px;}
+	50% {top:500px;}
+	75% {top:460px;}
+	100% {top:560px;}
+}
+
+/* Anim: Chien qui rigole quand on tue pas*/
+@keyframes chienRigole{
+	0% {background-position: -450px -140px;}
+	50% {background-position: -600px -140px;}
+}
+
+/* Anim: Canard vol Droite*/
+@keyframes duckFlyRight{
+	0% {background-position: -320px -300px;}
+	25%{background-position: -420px -300px;}
+	50%{background-position: -520px -300px;}
+	75%{background-position: -420px -300px;}
+}
+
+/* Anim: Canard vol Haut*/
+@keyframes duckFlyRightUp{
+	0% {background-position: -320px -390px;}
+	25%{background-position: -420px -390px;}
+	50%{background-position: -520px -390px;}
+	75%{background-position: -420px -390px;}
+}
+
+/* Anim: Canard vol plus loin*/
+@keyframes duckFlyAway{
+	0% {background-position: -320px -490px;}
+	25%{background-position: -420px -490px;}
+	50%{background-position: -520px -490px;}
+	75%{background-position: -420px -490px;}
+}
+
+/* Anim: Canard tombe*/
+@keyframes duckFall{
+	0%{background-position: -420px -580px;}
+	50% {transform:scale(-1,1);}
+	100%{background-position: -420px -580px;}
+	
+}
+
+/* Anim: Nuages*/
+@keyframes nuage {
+	from {
+	  left: -200px;
+	}
+	to {
+	  left: 6000px;
+	}
+}
+
+

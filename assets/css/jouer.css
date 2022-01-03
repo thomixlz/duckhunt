@@ -1,0 +1,383 @@
+/* TOUT LE CSS */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* FONTS POPPINS = CELLE UTILISER POUR L'INTERFACE */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+/* BODY */
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins";
+    background-image: url(../img/ps5/bg-dirt-5.png);
+    overflow: hidden;
+}
+
+/* BODY PLUS SOMBRE ( POUR VOIR LE TEXTE ) */
+
+body::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.460);
+    z-index: -1;
+}
+
+
+/*=============================================*/
+
+/* ==== HEADER ==== */ 
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 2.5em 1em;
+    
+}
+
+
+header .right, header .left{
+    display: flex;
+    align-items: center;
+}
+
+header .left a:nth-child(1) {
+    color: #fff !important;
+} 
+
+header a {
+    color: #adadad;
+    font-size: 2em;
+    display: flex;
+}
+
+header .left a, header .right a {
+    margin-right: 80px;
+}
+
+header .right .time {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+
+
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+
+/* ==== CSS DU CAROUSEL (BACKGROUND ET ICON DE JEUX) ==== */ 
+
+#carousel {
+	position: relative;
+	height: 85%;
+}
+
+#carousel > div {
+	position: absolute;
+	transition: transform 0.4s, left 0.4s, opacity 0.4s, z-index 0s;
+}
+
+#carousel section img {
+	width: 175px;
+    border-radius: 30px;
+	transition: width 0.4s;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+/*===*/
+
+#carousel .hideLeft {
+	left: -190px;
+    opacity: 0;
+
+}
+
+#carousel .hideLeft img {
+	width: 110px;
+}
+
+/*===*/
+
+#carousel .hideRight {
+	left: 685px;
+    opacity: 0;
+}
+
+#carousel .hideRight img {
+	width: 110px;
+    border-radius: 30px;
+}
+
+/*===*/
+/*prev = preview*/
+
+#carousel .prev {
+	z-index: 5;
+	left: 80px;	
+}
+
+#carousel .prev img {
+	width: 110px;
+}
+
+#carousel .prevLeftSecond {
+	z-index: 4;
+	left: -55px;	
+}
+
+#carousel .prevLeftSecond img {
+	width: 110px;
+}
+
+/*===*/
+
+#carousel .selected {
+	z-index: 1;
+	left: 215px;
+    height: 92%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#carousel .selected section img {
+    border: 3px solid transparent;
+    box-shadow: 0px 0px 0px 3px rgb(216, 216, 216);
+}
+
+#carousel .next {
+	z-index: 5;
+	left: 415px;
+}
+
+#carousel .next img {
+	width: 110px;
+}
+
+#carousel .nextRightSecond {
+	z-index: 4;
+	left: 550px;
+}
+
+#carousel .nextRightSecond img {
+	width: 110px;
+}
+
+/* Text à coté des icon de jeux, j'ai du les mettre dans une section pour contourner le programm qui changer la div en selected */
+
+#carousel .selected section span {
+	color: rgb(233, 233, 233);
+    font-size: 1.6em;
+    font-weight: 100;
+    margin-left: 5px;
+    position: relative;
+    bottom: 30px;
+}
+
+
+/* L'inverse = Si l'image n'est pas selected alors ... */
+
+#carousel :not(.selected) section span,
+#carousel :not(.selected) .info_du_jeu { 
+	display: none;
+
+}
+
+#carousel .selected .info_du_jeu { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/*=============================================*/
+
+/* ==== CSS INFO PAR JEU (INFO DROITE ET GAUCHE DE CHAQUE JEU) ==== */
+
+#carousel .selected .info_du_jeu .left h1 {
+    color: rgb(233, 233, 233);
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 40px 0 20px 0;
+}
+
+#carousel .selected .info_du_jeu .button-left{
+    display: flex;
+}
+
+#carousel .selected .info_du_jeu .button-left a {
+    background-color: rgba(255, 255, 255, 0.123);
+    color: #fff;
+    font-size: 2em;
+    margin-right: 10px;
+    border-radius: 50px; 
+}
+
+#carousel .selected .info_du_jeu .button-left a:nth-child(1) {
+    padding: 10px 120px;
+}
+
+
+#carousel .selected .info_du_jeu .button-left a:nth-child(2) {
+    height: 65px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#carousel .selected .info_du_jeu .right .more_info_du_jeu {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 0;
+}
+
+#carousel .selected .info_du_jeu .right .more_info_du_jeu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 45%, #000 85%);
+    z-index: 0;
+}
+
+#carousel .selected .info_du_jeu .right .more_info_du_jeu span {
+    z-index: 1;
+    
+}
+
+#carousel .selected .info_du_jeu .right .more_info_du_jeu span.complet {
+    color: #fff;
+    border: 2px solid #fff;
+    width: fit-content;
+    padding: 2px 8px;
+    margin-left: 17px;
+}
+
+#carousel .selected .info_du_jeu .right .more_info_du_jeu span.update {
+    background-color: #fff;
+    color: black;
+    width: fit-content;
+    font-weight: 700;
+    margin: 17px 0 17px 17px;
+    padding: 2px;
+    font-size: 0.9em;
+}
+
+#carousel .selected .info_du_jeu .right .trophy {
+    width: 300px;
+    height: 100px;
+    background-color:rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#carousel .selected .info_du_jeu .right .trophy i{
+    color: #acacac;
+    font-size: 2.4em;
+}
+
+#carousel .selected .info_du_jeu .right .trophy div{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+#carousel .selected .info_du_jeu .right .trophy .progress span:nth-child(1),
+#carousel .selected .info_du_jeu .right .trophy .win span:nth-child(1) {
+    color: rgba(177, 177, 177);
+}
+
+#carousel .selected .info_du_jeu .right .trophy .progress span:nth-child(2),
+#carousel .selected .info_du_jeu .right .trophy .win span:nth-child(2) {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+
+#carousel .selected .info_du_jeu .right .trophy .win span:nth-child(2) {
+    text-align: right;
+}
+
+
+
+/* Remplace chaque image obligé de passer par un vieux id a chaque fois les div pette un plomb*/
+
+#carousel .selected#sack-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-sackboy.png);
+}
+
+#carousel .selected#spider-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-spider-man.png);
+}
+
+#carousel .selected#demons-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-demons-souls.png);
+}
+
+#carousel .selected#dirt-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-dirt-5.png);
+}
+
+#carousel .selected#yakuza-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-yakuza.png);
+}
+
+#carousel .selected#xi-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-XIII.png);
+}
+
+#carousel .selected#watch-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-watch-dogs.png);
+}
+
+#carousel .selected#rps-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-rps.png);
+}
+
+#carousel .selected#shothunt-right .right .more_info_du_jeu {
+    background-image: url(../img/ps5/game-thumbnail-duck.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

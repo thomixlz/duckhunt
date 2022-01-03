@@ -1,0 +1,414 @@
+<!--====== Le but de ce projet est de repoduire l'interface PS5 afin de proposé une séléction de jeux
+    En effet nous avons utilisé plusieurs tutoriel pour arriver à nos fin, mais le code est écrit de A à Z et compris à 100% ======-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Playstation 5 | Profil : Sikara</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+
+        <!-- FAVICON --> 
+
+        <link rel="icon" href="assets/img/playstation.ico" />
+
+        <!-- CSS --> 
+        
+        <link rel="stylesheet" href="assets/css/jouer_intro.css"/>
+        <link rel="stylesheet" href="assets/css/jouer.css"/>
+
+        <!-- POLICE D'ECRITURE / FONTS --> 
+        <link rel="stylesheet" href="assets/css/fonts.css">
+        <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+        <link href="//db.onlinewebfonts.com/c/6aa06a9a432b8417171f60d8351aa310?family=Torus+Notched" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+         <!--====== INTRODUCTION ANIMATION PAGE - Style connexion à la console de jeu (ps5) (Fait avec un tuto quand même :D ) ======-->
+         <!--====== https://www.youtube.com/watch?v=2ak37WrbSDg (source) ======-->
+
+        <div class="intro">
+            <h1 class="logo-header">
+                <span class="logo">Bonjour, Mr GIRARD</span><br><span class="logo"> Connexion...</span> 
+            </h1>
+        </div>
+
+        <!--====== HEADER (Jeux + Contenu Multimédia) ======-->
+
+        <header>
+
+            <div class="left">
+                <a href="">Jeux</a>
+                <a>Contenu multimédia</a>
+            </div>
+
+            <div class="right">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-cog"></i></a>
+                <a href="#"><img src="assets/img/ps5/profil-pic.jpg" style="height:50px; border-radius:50px;"></i></a>
+                <span class="time">06:09</span>
+            </div>
+
+        </header>
+
+        <!--====== CAROUSEL (Différents jeux) ======-->
+
+        <div id="carousel">
+
+            <div class="hideLeft" id="sack-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-sackboy.png" id="sackboy">
+                <span> Sackboy: A big Adventure | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-sackboy.png">
+                        <h1> Sackboy: A big Adventure </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>  
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 50% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>23/46</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+     
+            <div class="prevLeftSecond" id="spider-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-spider-man.png" id="spider-man">
+                <span> SPIDER MAN | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-spider-man.png">
+                        <h1> SPIDER MAN : Miles Morales </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 0% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>0/102</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+     
+            <div class="prev" id="demons-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-demons-souls.png" id="demon">
+                <span> Demon's Souls | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-demons-souls.png">
+                        <h1> Demon's Souls </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 0% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>0/67</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="selected" id="dirt-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-dirt-5.png" id="dirt">
+                <span> DIRT 5 | PS5 </span>
+                </section>
+    
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-dirt-5.png">
+                        <h1> DIRT 5 </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 29% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>8/43</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="next" id="yakuza-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-yakuza.png" id="yakuza">
+                <span> Yakuza : Like a Dragon | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-yakuza.png">
+                        <h1> Yakuza : Like a Dragon  </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 19% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>9/29</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="nextRightSecond" id="xi-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-XIII.png" id="xi">
+                <span> XIII | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-XIII.png">
+                        <h1> XIII </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 6% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>3/21</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+    
+            <div class="hideRight" id="watch-right">
+                <section>
+                <img src="assets/img/ps5/game-watch-dogs.png" id="watch">
+                <span> Watch Dogs : Legion | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-watch.png">
+                        <h1> Watch Dogs </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 0% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>0/87</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="hideRight" id="rps-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-rps.png" id="rps">
+                <span> Rock Paper Scissors | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-rps.png">
+                        <h1> Rock Paper Scissors : Ultimate Edition </h1>
+                        <div class="button-left">
+                            <a href="#">Indisponible</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 0% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>0/667</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="hideRight" id="shothunt-right">
+                <section>
+                <img src="assets/img/ps5/game-thumbnail-duck.png" id="shot">
+                <span> Duck Hunt by ROG | PS5 </span>
+                </section>
+
+                <div class="info_du_jeu">
+                    <div class="left">
+                        <img src="assets/img/ps5/logo-duck.png">
+                        <h1> Duck Hunt by ROG </h1> 
+                        <div class="button-left">
+                            <a href="duckhunt.html">Jouer</a>
+                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </div>   
+                    
+                    <div class="right">
+                        <div class="more_info_du_jeu">
+                            <span class="complet">Jeu complet</span>
+                            <span class="update">Mise à niveau PS gratuite</span>
+                        </div>
+                        <div class="trophy">
+                            <i class="fas fa-trophy"></i>
+                            <div class="progress">
+                                <span>Progression</span>
+                                <span> 0% </span>
+                            </div>
+                            <div class="win">
+                                <span>Remportés</span>
+                                <span>0/69</span>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+
+</div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        
+        <!-- INTRO.JS (Bienvenue ... Connexion...)  -->
+        <script src="assets/js/intro.js"></script> 
+         <!-- CAROUSEL.JS by DobladoV  -->
+        <script src="assets/js/carousel.js"></script>
+        
+       
+        
+
+    </body>
+</html>

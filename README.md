@@ -11,8 +11,6 @@ Et oui ! C'est possible et c'est un jeune développeur tout droit venu de France
 La consigne de mon exercice indiqué devoir juste réaliser un DUCKHUNT en utilisant javascrpit et en faisant attention aux demandes spécifié par le professeur.
 D'ou le titre, on notera que le projet est surtout sur le duckhunt réaliser en javascript, html et css.
 
-Le projet comporte encoreen béta et n'est pas totalement terminé.
-
 ## Le Duckhunt
 
 Une fois le jeu lancer plusieurs modes s'offrent à vous :

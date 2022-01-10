@@ -41,7 +41,7 @@ Le mode solo respecte la consigne et est le mode noté :
 Le but est simple, c'est un mode 1 contre 1 en local.
 Un joueur 1 utilise ZQSD ou les flèches directionnel et dirigent le canard.
 Il gagne 1 point toute les 10 secondes.
-Un joueur 2 utilise sa souris et son clic droite et dirigent le fusil.
+Un joueur 2 utilise sa souris et son clic gauche et dirigent le fusil.
 Il gagne 1 points quand il tir sur le canard, les munitions sont infini
 
 

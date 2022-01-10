@@ -1,0 +1,633 @@
+/* TOUT LE CSS */ 
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   scroll-behavior: smooth;
+   font-family: "poppins"; 
+}
+
+/* FONTS */
+
+h1, h2, h3, h4, h5, h6,
+button {
+    font-family: "Torus Notched";
+}
+
+.jeux p, .credit p {
+    font-family: "Torus Notched";
+}
+
+.jeux p strong, .credit p strong {
+    font-family: "Torus Notched";
+    color: #5b5179;
+}
+
+.jeux .souligne p  a{
+    font-family: "Torus Notched";
+    color: #5b5179;
+    text-decoration: underline;
+}
+
+.credit .milieu .petit p  a{
+    font-family: "Torus Notched";
+    color: #5b5179a9;
+    font-size: 10px;
+}
+
+
+
+
+/* BODY */
+
+body {
+    overflow-x: hidden;
+    max-width: 1920px;
+}
+/*=============================================*/
+
+/* ==== CARROUSSEL ==== */ 
+
+.carrousel {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.carrousel a {
+    background-color: transparent;
+    border: 3px solid #1f5281;
+    border-radius: 50px;
+    margin-left: 30px;
+    height: 13px;
+    width: 13px;
+    margin: 5px 0;
+    z-index: 3;
+    margin-left: 30px;
+}
+
+.carrousel a.active {
+    background-color: #1f5281;
+}
+
+
+
+
+/*=============================================*/
+
+/* ==== HEADER ==== */ 
+
+header {
+    height: 120px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute; /* Passe sous le haut de page (background_hautdepage) */ 
+}
+
+
+header .container_header {
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+header .container_header ul{
+    display: flex;
+}
+
+header .container_header ul a{
+    font-size: 1.3em;
+    font-weight: 550;
+    margin: 0px 30px;
+    color: #66aefc;
+    font-family: "Torus Notched";
+}
+
+/* RESPONSIVE HEADER */
+
+@media (max-width: 1500px){
+    header {
+        background-color: #66aefc;
+        position: relative;
+    }
+
+    header .container_header {
+        width: 100%;
+    }
+
+    header .container_header ul a{
+        color: #ffff;
+    }
+}
+
+@media (max-width: 750px){
+    header .logo {
+        display: none;
+    }
+
+    header .container_header {
+        justify-content: center;
+    }
+
+    header .container_header ul a{
+        margin: 0 10px;
+    }
+}
+
+/*=============================================*/
+
+/* ==== PART 1: HAUT DE PAGE ==== */ 
+
+@media(min-width: 1500px) {
+    .haut_de_page {
+        height: 100vh;
+        width: 100%;
+        background-image: url(../img/index/.png/background_hautdepage.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    .img_background_responsive {
+        display: none;
+    }
+}
+
+
+.haut_de_page .big_titre {
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.haut_de_page h1 {
+    color: #3853b6;
+    font-size: 8em;
+    margin-bottom: 70px;
+}
+
+/* Bouton : JOUER */
+
+.haut_de_page button {
+    position: relative;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    border: 3px solid #3853b6;
+    background-color: #ffff;
+    font-size:  1.6em;
+    color: #3853b6;
+    z-index: 2;
+    transition: 0.5s;
+    overflow: hidden; /* Supprimer ce qui hors button */
+    cursor: pointer;
+}
+
+/* Effet bouton une fois la souris dessus */
+
+.haut_de_page button::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    background-color: #3853b6;
+    top: -2px;
+    left: 0px;
+    transform: translate(-100%);
+    transition: 1s;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.haut_de_page button:hover::before {
+    transform: translate(0%);
+}
+
+
+.haut_de_page button:hover {
+    color: #ffff;
+}
+
+
+/* RESPONSIVE HAUT DE PAGE */
+
+
+@media (max-width: 1500px){
+    .haut_de_page .big_titre {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .haut_de_page {
+        width: 100%;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .haut_de_page .img_background_responsive {
+        margin-top: 50px;
+    }
+
+    .haut_de_page .img_background_responsive img {
+        width: 600px;
+    }
+}
+
+@media (max-width: 950px){
+
+    .haut_de_page h1 {
+        font-size: 6em;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 700px){
+    .haut_de_page .img_background_responsive img {
+        width: 80%;
+    }
+
+    .haut_de_page h1 {
+        font-size: 5em;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 500px){
+    .haut_de_page h1 {
+        font-size: 3em;
+    }
+}
+/*=============================================*/
+
+/* ==== TRANSITION ==== */ 
+
+.transition {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-30%);
+    z-index: 1; 
+}
+
+.transition img {
+    width: 100%;
+    filter: drop-shadow(0px 10px 4px #acc4e8);
+}
+
+/*=============================================*/
+
+/* ==== PART 2: HISTOIRE anciennement nos jeux on a tout changé ==== */ 
+
+.nos_jeux {
+    background: linear-gradient(135deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%); 
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 120px 0;
+}
+
+.nos_jeux .container_nosjeux {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nos_jeux .titre_nosjeux {
+    width: 100%;
+    text-align: center;
+    color: #ffff;
+    position: relative;
+    font-size: 3em;
+    margin-bottom: 100px;
+}
+
+.nos_jeux .titre_nosjeux::before {
+    background-color: #1f5281;
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    clip-path: polygon( /* CLIC PATH CSS TEST */
+        0 0, 
+        100% 0,
+        100% 80%,
+        80% 35%,
+        64% 100%,
+        48% 35%,
+        31% 100%,
+        16% 35%,
+        0 80%
+    ); 
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.jeux1, .jeux2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nos_jeux .jeux {
+    color: #ffff;
+}
+
+.nos_jeux h2 {
+    font-size: 2.5em;
+}
+
+.nos_jeux .titre {
+    display: flex;
+    align-items: center;
+}
+
+.nos_jeux .point_debut {
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #1f5281;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+
+.nos_jeux .separateur_design {
+    width: 75px;
+    height: 7px;
+    background-color: #1f5281;
+    border-radius: 0 50px 0;
+    margin: 25px 0;
+}
+
+.nos_jeux p {
+   max-width: 600px;
+   line-break: anywhere;
+}
+
+.jeux {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+/* RESPONSIVE PART2 */
+
+/* Je fais attention à l'ordre image , texte (1e jeu : colonne et 2eme jeu : colonne REVERSE */
+
+
+@media (min-width: 1500px){
+    .nos_jeux .jeux1 .left {
+        max-width: 700px;
+    } 
+
+    .nos_jeux .jeux2 .right {
+        max-width: 700px;
+    } 
+}
+
+@media (max-width: 1500px) {
+
+    .nos_jeux .jeux {
+        margin: 43px 0;
+    }
+
+    .nos_jeux .jeux img {
+        width: 90%;
+    }
+
+    .nos_jeux .jeux1 {
+        flex-direction: column; 
+    } 
+
+    .nos_jeux .jeux2 {
+        flex-direction: column-reverse;
+    }
+
+    .nos_jeux .container_nosjeux {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nos_jeux p {
+        max-width: 900px;
+        margin: 0 50px;
+    }
+
+    .nos_jeux .jeux1 .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .nos_jeux .jeux2 .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .nos_jeux .separateur_design {
+        border-radius: 50px;
+    }
+
+    .nos_jeux .titre {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nos_jeux .point_debut {
+        margin-right: 0px;
+    }
+
+}
+
+/*=============================================*/
+
+/* ==== PART 3: CREDIT ==== */ 
+
+.credit {
+    position: relative;
+    height: 750px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    z-index: 0;
+    filter: drop-shadow(3px 5px 4px #232323);
+    top: -2px;
+}
+
+
+.credit .milieu {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.credit .credit_contenue {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+
+
+.credit .left img {
+    margin: 0 150px 0 120px;
+    margin-top: 30px;
+    width: 60%;
+}
+
+.credit .right img {
+    width: 30%;
+    opacity: 60%;
+}
+
+
+.credit .milieu h1 {
+    font-size: 3em;
+    color: #1f5281;
+    margin-top: 10px;
+}
+
+.credit .milieu h2 {
+    font-size: 2em;
+    color: #0e4274;
+    margin-top: 10px;
+}
+
+.credit .milieu p {
+    max-width: 400px;
+    color: #1f5281;
+    margin: 20px 0;
+}
+
+.credit .right {
+    position: relative;
+    left: 50px;
+    z-index: -1;
+}
+
+
+/* Bouton : MNS */
+
+.credit button {
+    position: relative;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    border: 3px solid #1f5281;
+    background-image: url(../img/index/.png/mnsblue.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-color: #1f5281;
+    background-position-x: 48%;
+    background-position-y: center;
+    background-color: #ffff;
+    font-size:  1.6em;
+    color: #1f5281;
+    transition: 0.5s;
+    overflow: hidden; /* Supprimer ce qui hors button */
+    cursor: pointer;
+}
+
+/* Effet bouton une fois la souris dessus */
+
+.credit button::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    background-image: url(../img/index/.png/mns.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-color: #1f5281;
+    background-position-x: 48%;
+    background-position-y: center;
+    top: -2px;
+    left: 0px;
+    transform: translate(-100%);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.credit button:hover::before {
+    transform: translate(0%);
+}
+
+
+.credit button:hover{
+    color: #ffff;
+}
+
+
+.credit .credit_contenue .milieu img {
+    max-width: 100px;
+    margin-top: 5px;
+    
+}
+
+
+
+
+@media (max-width: 1650px) {
+    .credit .right {
+        display: none;
+    }
+}
+
+@media (max-width: 1286px) {
+    .credit .credit_contenue {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        align-items: center;
+        margin-bottom: 200px;
+    }
+
+    .credit .left {
+        margin: 0;
+    }
+
+    .credit .left img {
+        display: none;
+    }
+
+    .credit .milieu {
+        text-align: center;
+    }
+
+    .credit .milieu p {
+        margin: 50px auto;
+        max-width: 550px;
+    }
+
+    .credit .milieu h1, .credit .milieu h2,  .credit .milieu h1, .credit .milieu p {
+        color: #1f5281;
+    } 
+
+}
+

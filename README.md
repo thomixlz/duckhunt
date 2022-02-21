@@ -26,7 +26,7 @@ Multijoueur
 
 # Solo
 
-Le mode solo ne respecte pas la consigne mais est un mode bonus :
+Le mode mutlijoueur ne respecte pas la consigne mais est un mode bonus :
 
 Le but est simple, 10 canards vont défiler sur votre écran 1 à 1.
 Vous avez 3 balles maximum dans le chargeur pour en tuer 1 seul.
